@@ -31,5 +31,5 @@ abstract public class HatRenderer implements TrinketRenderer {
         matrices.pop();
     }
 
-    abstract protected void renderHat(ItemStack stack, SlotReference slotReference, PlayerEntityModel<ClientPlayerEntity> entityModel, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, ClientPlayerEntity entity, float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch);
+    abstract protected void renderHat(ItemStack stack, SlotReference slotReference, PlayerEntityModel<ClientPlayerEntity> playerModel, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, ClientPlayerEntity player, float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch);
 }
