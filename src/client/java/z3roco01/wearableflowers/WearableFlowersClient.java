@@ -1,6 +1,8 @@
 package z3roco01.wearableflowers;
 
-import dev.emi.trinkets.api.client.TrinketRendererRegistry;
+import io.wispforest.accessories.api.client.AccessoriesRendererRegistry;
+import io.wispforest.accessories.api.client.AccessoryRenderer;
+import io.wispforest.accessories.api.client.DefaultAccessoryRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.minecraft.item.Items;
 import org.slf4j.Logger;
@@ -12,7 +14,7 @@ public class WearableFlowersClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		TrinketRendererRegistry.registerRenderer(Items.ALLIUM,             new FlowerRenderer(Items.ALLIUM));
+		/*TrinketRendererRegistry.registerRenderer(Items.ALLIUM,             new FlowerRenderer(Items.ALLIUM));
 		TrinketRendererRegistry.registerRenderer(Items.AZURE_BLUET,        new FlowerRenderer(Items.AZURE_BLUET));
 		TrinketRendererRegistry.registerRenderer(Items.BLUE_ORCHID,        new FlowerRenderer(Items.BLUE_ORCHID));
 		TrinketRendererRegistry.registerRenderer(Items.CORNFLOWER,         new FlowerRenderer(Items.CORNFLOWER));
@@ -25,7 +27,8 @@ public class WearableFlowersClient implements ClientModInitializer {
 		TrinketRendererRegistry.registerRenderer(Items.PINK_TULIP,         new FlowerRenderer(Items.PINK_TULIP));
 		TrinketRendererRegistry.registerRenderer(Items.RED_TULIP,          new FlowerRenderer(Items.RED_TULIP));
 		TrinketRendererRegistry.registerRenderer(Items.WHITE_TULIP,        new FlowerRenderer(Items.WHITE_TULIP));
-		TrinketRendererRegistry.registerRenderer(Items.WITHER_ROSE,        new FlowerRenderer(Items.WITHER_ROSE));
+		TrinketRendererRegistry.registerRenderer(Items.WITHER_ROSE,        new FlowerRenderer(Items.WITHER_ROSE));*/
+		AccessoriesRendererRegistry.registerRenderer(Items.POPPY, FlowerRenderer::new);
 
 		LOGGER.info("client init finished :p");
 	}

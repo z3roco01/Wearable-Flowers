@@ -7,20 +7,20 @@ import net.minecraft.util.Identifier;
 import z3roco01.wearableflowers.WearableFlowers;
 
 public class FlowerItems {
-    public static final Item ALLIUM             = new Item(new Item.Settings());
-    public static final Item AZURE_BLUET        = new Item(new Item.Settings());
-    public static final Item BLUE_ORCHID        = new Item(new Item.Settings());
-    public static final Item CORNFLOWER         = new Item(new Item.Settings());
-    public static final Item DANDELION          = new Item(new Item.Settings());
-    public static final Item LILY_OF_THE_VALLEY = new Item(new Item.Settings());
-    public static final Item OXEYE_DAISY        = new Item(new Item.Settings());
-    public static final Item POPPY              = new Item(new Item.Settings());
-    public static final Item TORCHFLOWER        = new Item(new Item.Settings());
-    public static final Item ORANGE_TULIP       = new Item(new Item.Settings());
-    public static final Item PINK_TULIP         = new Item(new Item.Settings());
-    public static final Item RED_TULIP          = new Item(new Item.Settings());
-    public static final Item WHITE_TULIP        = new Item(new Item.Settings());
-    public static final Item WITHER_ROSE       = new Item(new Item.Settings());
+    public static final FlowerItem ALLIUM             = new FlowerItem("allium");
+    public static final FlowerItem AZURE_BLUET        = new FlowerItem("azure_bluet");
+    public static final FlowerItem BLUE_ORCHID        = new FlowerItem("blue_orchid");
+    public static final FlowerItem CORNFLOWER         = new FlowerItem("cornflower");
+    public static final FlowerItem DANDELION          = new FlowerItem("dandelion");
+    public static final FlowerItem LILY_OF_THE_VALLEY = new FlowerItem("lily_of_the_valley");
+    public static final FlowerItem OXEYE_DAISY        = new FlowerItem("oxeye_daisy");
+    public static final FlowerItem POPPY              = new FlowerItem("poppy");
+    public static final FlowerItem TORCHFLOWER        = new FlowerItem("torchflower");
+    public static final FlowerItem ORANGE_TULIP       = new FlowerItem("orange_tulip");
+    public static final FlowerItem PINK_TULIP         = new FlowerItem("pink_tulip");
+    public static final FlowerItem RED_TULIP          = new FlowerItem("red_tulip");
+    public static final FlowerItem WHITE_TULIP        = new FlowerItem("white_tulip");
+    public static final FlowerItem WITHER_ROSE        = new FlowerItem("wither_rose");
 
     public static void register() {
         register("allium", ALLIUM);
@@ -39,8 +39,8 @@ public class FlowerItems {
         register("wither_rose", WITHER_ROSE);
     }
 
-    private static void register(String id, Item item) {
-        Registry.register(Registries.ITEM, Identifier.of(WearableFlowers.MOD_ID, id), item);
+    private static void register(String id, FlowerItem item) {
+        Registry.register(Registries.ITEM, item.REGISTRY_KEY, (Item)item);
     }
 }
 
